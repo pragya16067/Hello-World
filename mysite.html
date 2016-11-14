@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Pragya</title>
+		<link rel="stylesheet" href="pragya.css">
+		<script type='text/javascript'>
+		//script to change images by a timer
+var imageID=0;
+function changeimage(every_seconds){
+    //change the image
+    if(!imageID){
+        document.getElementById("myimage").src="http://www.all-freeware.com/images/full/38943-nice_feathers_free_screensaver_desktop_screen_savers__nature.jpeg";
+        imageID++;
+    }
+    else{if(imageID==1){
+        document.getElementById("myimage").src="http://www.hickerphoto.com/data/media/186/flower-bouquet-nice_12128.jpg";
+        imageID++;
+    }else{if(imageID==2){
+        document.getElementById("myimage").src="http://www.photos.a-vsp.com/fotodb/14_green_cones.jpg";
+        imageID=0;
+    }}}
+    //call same function again for x of seconds
+    setTimeout("changeimage("+every_seconds+")",((every_seconds)*1000));
+}
+</script>
+	</head>
+	<body onload='changeimage(2)'>
+		<div class="content">
+			<h1>Hi, I am Pragya Prakash</h1>
+			<h2>About Me</h2>
+			<img height=100% width=100% id='myimage' src="C:\Users\Pragya\Pictures\dc1.jpg">
+			<h3> I am a student at IIIT-Delhi.</h3><br>
+			<h3><a href="myhobbies.html">My Hobbies and Interests</a></h3>
+			<h3><a href="myachievements.html">My Achievements</a></h3>
+			<h3><a href="myprojects.html">My Projects</a></h3>
+		</div>
+	</body>
+</html>
